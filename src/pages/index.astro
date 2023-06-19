@@ -1,12 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import { Image, Picture } from '@astrojs/image/components';
 ---
 
-<Layout title="Astro World for Ray.">
+<Layout title="NoiSeBuRGeR LaB">
 	<main>
-		<h1>Astro World <span class="text-gradient">for Ray.</span></h1>
-		<ul role="list" class="link-card-grid">
+		<h1><span class="text-gradient">NoiSeBuRGeR LaB</span></h1>
+    <img src="images/studioLuv.jpg" />
+		<ul role="list" class="link-card-grid hide-for-now">
+      <Card
+				href="https://openai.com/chatgpt"
+				title="ChatGPT"
+				body="Ask me anything"
+			/>
 			<Card
 				href="https://docs.astro.build/"
 				title="Documentation"
@@ -23,15 +30,10 @@ import Card from '../components/Card.astro';
 				body="Explore a galaxy of community-built starter themes."
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-      <Card
-				href="https://openai.com/chatgpt"
-				title="ChatGPT"
-				body="Ask me anything"
-			/>
+        href="https://astro.build/examples/"
+        title="Examples"
+        body="Browse a collection of example projects built with Astro."
+      />
 		</ul>
 	</main>
 </Layout>
@@ -79,4 +81,7 @@ import Card from '../components/Card.astro';
 		gap: 1rem;
 		padding: 0;
 	}
+  .hide-for-now {
+    display: none;
+  }
 </style>
